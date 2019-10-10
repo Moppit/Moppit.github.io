@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>About Me</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      </head>
+      <body>
+        <!-- Brief Bio -->
+        <div class="container">
+          <h1>
+            Tran, Michelle -
+            <small class="text-muted" style="font-size: 25px">Software Develop Tools and Methods</small>
+          </h1>
+        </div>
+        <div class="card bg-light text-dark">
+          <div class="card-body">
+            I'm a sophomore at CU Boulder who is currently pursuing computer science
+            because I love problem solving, and that's pretty much all computer science is. <br>
+            Fun Facts About Me: <br>
+            1. I used to own 20 parakeets. <br>
+            2. I enjoy cross-stitching. <br>
+            3. I have a strange fascination with Australia. <br>
+          </div>
+        </div>
+
+        <!-- Professional Profile -->
+        <h2>My Professional Profile</h2>
+        <button type="button" class="btn btn-outline-secondary" name="github_profile">
+          <a href="https://github.com/Moppit">Github Profile</a><br>
+        </button>
+        <br>
+        <br>
+        <img src="https://tinyurl.com/y2gcd6b9" alt="Michelle Tran" class="rounded-circle" height="700px" width="500px">
+        <!-- Favorite Projects -->
+        <h3>My Favorite Projects</h3>
+        <table class="table" id="projects_table">
+          <tr>
+            <th>Project Name</th>
+            <th>Technology Used</th>
+          </tr>
+          <tr>
+            <td>Legend of Zelda BotW Adaptation</td>
+            <td>C++</td>
+          </tr>
+          <tr>
+            <td>Firewall Fighter</td>
+            <td>Leap Motion, Unity, C#</td>
+          </tr>
+          <tr>
+            <td>Social Q's</td>
+            <td>Python, Muse, Muse SDK, Rev.ai</td>
+          </tr>
+        </table>
+
+        <!-- Countries travelled and interests -->
+        <div class="container">
+          <div class="row">
+            <!-- Countries Travelled -->
+            <div class="col-sm">
+              <div class="accordion" id="accordion1">
+                <div class="card">
+                  <div class="card-header" id="card1">
+                    <div class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsePlaces" aria-expanded="false" aria-controls="collapsePlaces">
+                        Places Travelled
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="collapse show" id="collapsePlaces" aria-labelledby="card1" data-parent="#accordion1">
+                    Colorado - CU Boulder
+                  </div>
+                  <div class="collapse show" id="collapsePlaces" aria-labelledby="card1" data-parent="#accordion1">
+                    Massachusetts - HackMIT
+                  </div>
+                  <div class="collapse show" id="collapsePlaces" aria-labelledby="card1" data-parent="#accordion1">
+                    Minnesota
+                  </div>
+                  <div class="collapse show" id="collapsePlaces" aria-labelledby="card1" data-parent="#accordion1">
+                    North Dakota
+                  </div>
+                  <div class="collapse show" id="collapsePlaces" aria-labelledby="card1" data-parent="#accordion1">
+                    Arizona - Buff VEX Robotics
+                  </div>
+                  <div class="collapse show" id="collapsePlaces" aria-labelledby="card1" data-parent="#accordion1">
+                    North Carolina - NCWIT
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interests -->
+            <div class="col-sm">
+              <div class="accordion" id="accordion2">
+                <div class="card">
+                  <div class="card-header" id="card2">
+                    <div class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseInterests" aria-expanded="false" aria-controls="collapseInterests">
+                        Major Interests
+                      </button>
+                    </div>
+                  </div>
+                  <div class="collapse show" id="collapseInterests" aria-labelledby="card2" data-parent="#accordion2">
+                    Cloud Computing
+                  </div>
+                  <div class="collapse show" id="collapseInterests" aria-labelledby="card2" data-parent="#accordion2">
+                    DevOps
+                  </div>
+                  <div class="collapse show" id="collapseInterests" aria-labelledby="card2" data-parent="#accordion2">
+                    Virtual Reality
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal for fun -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Click me!</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Having fun?</h4>
+        </div>
+        <div class="modal-body">
+          <p>Press me again! (you have entered the infinite loop :P )</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+      </body>
+    </html>
