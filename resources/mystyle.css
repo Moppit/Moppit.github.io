@@ -103,3 +103,15 @@
 }
 
 /* ............................................................... */
+
+/* EHP Page */
+
+.left_column {
+  float: left;
+  width: 45%;
+}
+
+.right_column {
+  float: right;
+  width: 45%;
+}
