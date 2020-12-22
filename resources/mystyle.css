@@ -1,0 +1,105 @@
+/* ........................ Nav bar style ........................ */
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgb(81, 158, 230);
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: rgb(81, 158, 230);
+  color: white;
+}
+
+/* ............................................................... */
+
+/* ........................ Front page items ........................ */
+
+/* Columns */
+.home_left_column {
+  float: left;
+  width: 50%;
+}
+
+.home_right_column {
+  float: right;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Image decorations */
+.circle {
+  height: 12vw;
+  width: 12vw;
+  background-color: rgb(113, 238, 184);
+  border-radius: 50%;
+  right: 0vw;
+  bottom: -25vw;
+}
+
+.square {
+  height: 12vw;
+  width: 12vw;
+  background-color: rgb(254,255,186);
+  left: 15vw;
+  top: 5vw;
+}
+
+.triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 6vw solid transparent;
+	border-right: 6vw solid transparent;
+  border-bottom: 12vw solid #FFE6EE;
+  left: 18vw;
+  bottom: -42vw;
+}
+
+/* Decoration placements */
+#profile_container {
+  position: relative;
+}
+
+#profile_container > * {
+  position: absolute;
+}
+
+.photo_position {
+  left: 20vw;
+  right: 20vw;
+  top: 10vw;
+  bottom: 10vw;
+  width: 25vw; 
+  height: auto;
+}
+
+.info_position {
+  left: 10vw;
+  right: 10vw;
+  top: 10vw;
+  bottom: 10vw;
+}
+
+/* ............................................................... */
