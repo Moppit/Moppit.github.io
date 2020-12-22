@@ -18,15 +18,60 @@
 
     <!-- Navigation Bar -->
     <div class="topnav">
-    <a class="active" href="../index.html">Home</a>
+    <a href="../index.html">Home</a>
     <a href="../resources/resume.pdf">Resume</a>
     <a href="projects.html">Projects</a>
     <a href="ehp.html">EHP</a>
-    <a href="#">Album</a>
+    <a class="active" href="#">Album</a>
     </div>
 
-    <!-- Add work here -->
-    These are a few of my favorite things~
+    <div style="margin:5vw">
+        <!-- Musical note emoji utf8 code: 127926. For more emojis: https://www.w3schools.com/charsets/ref_emoji.asp -->
+        <h2 style="text-align: center; font-family: 'Apple Chancery';"> &#127926; These are a few of my favorite things~ &#127926;</h2>
+        <br>
+        
+        <!-- Sort by feature: TODO, modify example code below -->
+        <!-- <div style="left:auto; right:auto;"></div>
+        <form>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label>
+        </form> -->
+
+        <div id='image_gallery'></div>
+
+        <!-- Render Images -->
+        <script>
+            var container = document.getElementById('image_gallery');
+
+            // Get all image names
+            // TODO: find a better solution! Hardcoding here
+            var imgs = [
+            'angel_squirrel.png',
+            'cuttlefish.JPG',
+            'angel_squirrel2.png',
+            'phoenix.JPG',
+            'ggcp.png',
+            ];
+
+            // Create gallery div for each and append to DOM
+            var i;
+            for (i = 0; i < imgs.length; i++) {
+                var rel_url = "../resources/album_imgs/" + imgs[i];
+                var content = `
+                <div class="gallery">
+                    <a target="_blank" href="${rel_url}">
+                        <img src="${rel_url}">
+                    </a>
+                </div>
+                `;
+                container.innerHTML += content;
+            }
+        </script>
+    </div>
 
     </body>
 

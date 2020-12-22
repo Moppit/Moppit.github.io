@@ -1,4 +1,8 @@
-/* ........................ Nav bar style ........................ */
+/* Entire Site Theme */
+
+body {
+  font-family: 'Verdana';
+}
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -13,7 +17,7 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 /* Change the color of links on hover */
@@ -30,7 +34,7 @@
 
 /* ............................................................... */
 
-/* ........................ Front page items ........................ */
+/* Front page items */
 
 /* Columns */
 .home_left_column {
@@ -115,3 +119,26 @@
   float: right;
   width: 45%;
 }
+
+/* ............................................................... */
+
+/* Photo Album */
+div.gallery {
+  margin: 10px;
+  float: left;
+  width: 20vw;
+}
+
+div.gallery:hover {
+  transition: all 0.3s ease; 
+  opacity: .5; 
+  background-color: #000000; 
+}
+
+div.gallery img {
+  width:  20vw;
+  height: 20vw;
+  object-fit: cover;
+}
+
+/* ............................................................... */
