@@ -57,7 +57,7 @@ body {
 .circle {
   height: 12vw;
   width: 12vw;
-  background-color: rgb(113, 238, 184);
+  background-color: rgb(156, 250, 209);
   border-radius: 50%;
   right: 0vw;
   bottom: -25vw;
@@ -139,6 +139,32 @@ div.gallery img {
   width:  20vw;
   height: 20vw;
   object-fit: cover;
+}
+
+/* ............................................................... */
+
+/* Projects/Interests Page */
+
+.button {
+  border: none;
+  color: white;
+  background-color: rgb(81, 158, 230);
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-left: 40%;
+  margin-right: 40%;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+/* todo: omit undeline */
+.button a:hover {
+  background-color: rgb(81, 158, 230);
+  color: gray;
 }
 
 /* ............................................................... */

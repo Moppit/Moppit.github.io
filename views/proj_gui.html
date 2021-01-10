@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+    <html>
+
+    <head>
+        <!-- Import helpful bootstrap resources -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <!-- My own style additions/page attributes -->
+        <title>Projects</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../resources/mystyle.css">
+    </head>
+
+    <body>
+
+    <!-- Navigation Bar -->
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../resources/resume.pdf">Resume</a>
+        <a class="active" href="#">Projects</a>
+        <a href="ehp.html">EHP</a>
+        <a href="album.html">Album</a>
+    </div>
+    
+    <!-- Project Descriptions -->
+    <div style="margin:5vw;">
+
+    <h1 style="text-align: center;">Projects</h1>
+    <br><br>
+
+    <!-- Embroidery Problem -->
+    <div style="float: left; width: 40%;">
+        <!-- Sum of the left margin and the image width should be 40vw -->
+        <img style="width: 20vw; margin-left: 15vw;" src="../resources/album_imgs/phoenix.JPG" alt="Embroidery example">
+    </div>
+    <div style="float: right; width: 60%;">
+        <!-- Margin right always equal to margin left of the image - 10 -->
+        <div style="margin-left: 2vw; margin-right: 15vw;">
+            <h5>Practical Methods for the Embroidery Problem</h5>
+            <p>
+                The Embroidery Problem seeks to optimize thread usage while embroidering a given
+                pattern (which is represented by a Euclidean graph). A valid
+                embroidery of a pattern is described as a closed tour with 
+                alternating front and back edges, each with an associated weight (which,
+                due to the Euclidean integration, is equivalent to the distance 
+                between vertices). The problem is NP-Hard, as established by Arkin et al.
+                As such, we explore methods such as reducing to TSP and using TSP solvers, and
+                approximation algorithms.
+                <br><br>
+
+                The implementation can be found <a href="https://github.com/Moppit/EmbroideryProblem">here</a>.
+            </p>
+        </div>
+    </div>
+
+    <div style="content: ''; display: table; clear: both;"></div>
+    <br><br>
+    
+
+    <!-- Sudoku SAT Solver -->
+    <div style="float: left; width: 60%;">
+        <!-- Margin right always equal to margin left of the image - 10 -->
+        <div style="margin-left: 15vw; margin-right: 2vw;">
+            <h5>Sudoku Solver</h5>
+            <p>
+                Sudoku for nxn boards is NP-Complete, and as such it is difficult to find solutions efficiently.
+                This project contains two methods: a DPLL-style backtracking algorithm with constraint propagation, 
+                and a Sudoku-SAT reduction which is then run through Python-SAT's Glucose3 SAT solver. Unsurprisingly,
+                the polynomial reduction + SAT solver is the much more efficient solution given the recent progress
+                on SAT solvers.
+                <br><br>
+
+                The implementation can be found <a href="https://github.com/Moppit/CSCI4114-PSET3">here</a>.
+            </p>
+        </div>
+    </div>
+    <div style="float: right; width: 40%;">
+        <!-- Sum of the left margin and the image width should be 40vw -->
+        <img style="width: 18vw; margin-right: 15vw;" src="../resources/site_imgs/sudoku.png" alt="Sudoku board">
+    </div>
+
+    <div style="content: ''; display: table; clear: both;"></div>
+    <br><br>
+
+    <!-- Firewall Fighter -->
+    <div style="float: left; width: 40%;">
+        <!-- Sum of the left margin and the image width should be 40vw -->
+        <img style="width: 20vw; margin-left: 15vw;" src="../resources/site_imgs/firewall_fighter.png" alt="Firewall Fighter project from HackCU">
+    </div>
+    <div style="float: right; width: 60%;">
+        <!-- Margin right always equal to margin left of the image - 10 -->
+        <div style="margin-left: 2vw; margin-right: 15vw;">
+            <h5>Firewall Fighter</h5>
+            <p>
+                A game developed at HackCU V where players act as a firewall and block malicious traffic. The cursor is
+                controlled using a Leap Motion sensor, making it more interactive and fun for young children who are
+                just beginning to learn about cybersecurity. Created using Unity (C#).
+                <br><br>
+                More details can be found on the <a href="https://devpost.com/software/firewall-fighter">Devpost entry</a>.
+            </p>
+        </div>
+    </div>
+
+    <div style="content: ''; display: table; clear: both;"></div>
+    <br><br>
+
+    </div>
+
+    </body>
+</html>

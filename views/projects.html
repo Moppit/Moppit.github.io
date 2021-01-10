@@ -8,10 +8,16 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+        <!-- Terminal Emulator -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+
         <!-- My own style additions/page attributes -->
         <title>Projects</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../resources/mystyle.css">
+        <script src="../resources/js/project_descriptions.js"></script>
     </head>
 
     <body>
@@ -25,17 +31,77 @@
         <a href="album.html">Album</a>
     </div>
     
-    <div style="margin:5vw; text-align: center;">
-        <h2>Projects</h2>
+    <div>
         <br>
-        <p>
-            More to come! In the meantime, check out my Github and Devpost profiles to learn more about the projects I’ve worked on: <br><br>
-    
-            Github: <a href="https://github.com/Moppit">https://github.com/Moppit</a>
-            <br>
-            <br>
-            Devpost: <a href="https://devpost.com/Moppit">https://devpost.com/Moppit</a>
-        </p>
+
+        <!-- Terminal -->
+        <div id="terminal_window" style="margin-top: 2vw; margin-left: 10vw; margin-right: 10vw; height: 40vw;"></div>
+
+        <script>
+        let contents = ['dev-profiles.txt', 'embroidery.txt', 'sudoku.txt', 'firewall.txt'];
+
+        $('#terminal_window').terminal({
+
+            // help: Informs people how to use the terminal
+            help: function() {
+                this.echo('ls               list items in the current folder\n'
+                        + 'cat <filename>   read contents of a file\n'
+                        + 'gui              view project details on a webpage GUI\n');
+            },
+
+            // ls: list contents of folder
+            ls: function() {
+                for(var i = 0; i < contents.length; i++) {
+                    this.echo(contents[i]);
+                }
+            },
+
+            // cat: list contents of file
+            cat: function(file) {
+                if(file == 'dev-profiles.txt') {
+                    let devpost = "https://devpost.com/Moppit";
+                    let github = "https://github.com/Moppit";
+                    this.echo("Check out my Github and Devpost profiles to learn more about the projects I’ve worked on:\n"
+                              + "Github: " + github + '\n'
+                              + "Devpost: " + devpost + '\n');
+                }
+                else if(file == 'embroidery.txt') {
+                    const img = $('<img style="width: 200px;" src="../resources/album_imgs/phoenix.JPG">');
+                    this.echo(img);
+                    this.echo();
+                    this.echo(embroidery);
+                }
+                else if(file == 'sudoku.txt') {
+                    const img = $('<img style="width: 200px;" src="../resources/site_imgs/sudoku.png">');
+                    this.echo(img);
+                    this.echo();
+                    this.echo(sudoku);
+                }
+                else if(file == 'firewall.txt') {
+                    const img = $('<img style="width: 200px;" src="../resources/site_imgs/firewall_fighter.png">');
+                    this.echo(img);
+                    this.echo();
+                    this.echo(firewall);
+                }
+                else {
+                    this.echo('cat: ' + file + ': No such file or directory');
+                }
+            },
+
+            // gui: goes to GUI version of projects page
+            gui: function() {
+                window.location.href = "proj_gui.html";
+            }
+
+        }, {
+            greetings: '______          _           _        \n| ___ \\        (_)         | |       \n| |_/ / __ ___  _  ___  ___| |_ ___  \n|  __/ \'__/ _ \| |/ _ \\/ __| __/ __| \n| |  | | | (_) | |  __/ (__| |_\\__ \\ \n\\_|  |_|  \\___/| |\\___|\\___|\\__|___/ \n              _/ |                   \n             |__/       \n'
+            + "\nType 'help' to begin."
+        });
+        </script>
+
+        <!-- Button to GUI -->
+        <a href="proj_gui.html" class="button">View Without Terminal</a>
+
     </div>
 
     </body>
